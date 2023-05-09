@@ -94,7 +94,7 @@ int main(int argc, char* argv[])
                     maxfd = clients[i];
             }
         }
-        printf("#0: %s\n", strerror(errno));
+        //printf("#0: %s\n", strerror(errno));
 
         printf("Starting to monitor socket activity...\n");
         // maxfd + 1 to make sure to monitor all file descriptors (sent data/disconnected)
@@ -143,7 +143,7 @@ int main(int argc, char* argv[])
                         if (sent <= 0) {
                             close(clients[j]);
                             clients[j] = -1;
-                            printf("Peer not connected.\n");
+                            //printf("Peer not connected.\n");
                         }
                     }
                 }
